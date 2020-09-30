@@ -10,7 +10,7 @@
 			<Label text="{i18n>brand}"/>
 			<Input value="{data>brand}"/>
 			
-			<Label text="{i18n>model}" required="true"/>
+			<Label text="{i18n>model}" required="true"/> 
 			<Input value="{data>model}"/>
 			
 			<Label text="{i18n>year}" required="true"/>
