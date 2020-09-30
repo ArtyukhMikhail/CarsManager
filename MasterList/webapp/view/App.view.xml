@@ -1,0 +1,5 @@
+<mvc:View controllerName="masterdetail.MasterList.controller.App" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+	<Page id="idAppPage" title="{i18n>appPage}">
+		<SplitApp id="idSplitApp"></SplitApp>
+	</Page>
+</mvc:View>

@@ -1,0 +1,43 @@
+<mvc:View controllerName="masterdetail.MasterList.controller.DetailObject" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m"
+	xmlns:f="sap.ui.layout.form">
+	<Page id="idPage" title="{data>id}">
+		<content>
+			<ObjectHeader title="{data>brand} {data>model}" number="{data>year}" class="sapUiResponsivePadding--header">
+				<ObjectAttribute title="{i18n>color}" text="{data>color}"/>
+				<ObjectAttribute title="{i18n>odometer}" text="{data>odometer}"/>
+			</ObjectHeader> 
+			
+			<Label text="{i18n>brand}"/>
+			<Input value="{data>brand}"/>
+			
+			<Label text="{i18n>model}" required="true"/>
+			<Input value="{data>model}"/>
+			
+			<Label text="{i18n>year}" required="true"/>
+			<Input value="{data>year}"/>
+			
+			<Label text="{i18n>odometer}" required="true"/>
+			<Input value="{data>odometer}"/>
+			
+			<Label text="{i18n>engine}" required="true"/>
+			<Input value="{path: 'data>engine', type: 'sap.ui.model.type.Float', formatOptions: { maxIntegerDigits: 2, decimalSeparator: '.' }, 
+							constraints: { maximum: '10.0', minimum: '1.0'} }"/>
+							
+			<Label text="{i18n>gear}" required="true"/>
+			<Input value="{path: 'data>gear', type: '.types.transmissionType' }"/>
+			
+			<Label text="{i18n>maxSpeed}" required="true"/>
+			<Input value="{path: 'data>maxSpeed', formatter: '.speedFormatter'}"/>
+			
+			<Label text="{i18n>price}" required="true"/>
+			<Input value="{data>price}"/>
+		</content>
+		<footer>
+			<Bar>
+				<contentRight>
+					<Button text="{i18n>order}" type="Accept" icon="sap-icon://accept" press="handleOrder"/>
+				</contentRight>
+			</Bar>
+		</footer>
+	</Page>
+</mvc:View>

@@ -1,0 +1,45 @@
+{
+	"cars": [
+		{
+			"id": "id1",
+			"brand": "Nissan",
+			"model": "Almera",
+			"year": 2001,
+			"odometer": 275000,
+			"engine": 1.6 ,
+			"gear": "CVT",
+			"maxSpeed": 170 ,
+			"price": "500000",
+			"currency": "RUB",
+			"status": "1"
+
+		},
+		{
+			"id": "id2",
+			"brand": "LADA",
+			"model": "2101",
+			"year": 1981,
+			"odometer": 102000,
+			"engine": 1.6,
+			"gear": "AT",
+			"maxSpeed": 180 ,
+			"price":"1200000",
+			"currency": "USD",
+			"status": "0"
+
+		},
+		{
+			"id": "id3",
+			"brand": "Audi",
+			"model": "A4",
+			"year": 1998,
+			"odometer": 360000,
+			"engine": 1.5,
+			"gear": "MT",
+			"maxSpeed": 190,
+			"price":"800000",
+			"currency": "EUR",
+			"status": "1"
+		}
+	]
+}

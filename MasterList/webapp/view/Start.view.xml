@@ -1,0 +1,26 @@
+<mvc:View controllerName="masterdetail.MasterList.controller.Start" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+	<Page id="page" title="{i18n>cars}">
+		<subHeader>
+			<Bar>
+				<contentLeft>
+					<SearchField search="handleSearch"/>
+				</contentLeft>
+			</Bar>
+		</subHeader>
+		<content>
+			<List id="idList" items="{data>/cars}">
+				<ObjectListItem type="Navigation" press="onItemPress" title="{data>brand} {data>model}"
+					number="{path: 'data>price', type: 'sap.ui.model.type.Float', formatOptions: { groupingSeparator: ' ', decimalSeparator: '.', maxFractionDigits: 2 } }"
+					numberUnit="{data>currency}">
+					<attributes>
+						<ObjectAttribute
+							text="{i18n>odometer}:{path: 'data>odometer', type: 'sap.ui.model.type.Integer', formatOptions: { groupingSeparator: ' ' } }"/>
+					</attributes>
+					<firstStatus>
+						<ObjectStatus text="{= ${Discontinued} ? ${i18n>Discontinued} : ${i18n>Available} }" state="{= ${Discontinued}? 'Error' : 'Success' }"/>
+					</firstStatus>
+				</ObjectListItem>
+			</List>
+		</content>
+	</Page>
+</mvc:View>
