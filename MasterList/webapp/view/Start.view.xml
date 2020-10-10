@@ -8,6 +8,7 @@
 			</Bar>
 		</subHeader>
 		<content>
+		<!--
 			<List id="idList" items="{data>/cars}">
 				<ObjectListItem type="Navigation" press="onItemPress" title="{data>brand} {data>model}"
 					number="{path: 'data>price', type: 'sap.ui.model.type.Float', formatOptions: { groupingSeparator: ' ', decimalSeparator: '.', maxFractionDigits: 2 } }"
@@ -21,6 +22,14 @@
 					</firstStatus>
 				</ObjectListItem>
 			</List>
+			--> 
+		
+		
+		<List id="idList" items="{/CarsSet}">
+		<ObjectListItem type="Navigation" press="onItemPress" title="{Brand} {Model}">
+		</ObjectListItem>
+		</List>
+		
 		</content>
 	</Page>
 </mvc:View>

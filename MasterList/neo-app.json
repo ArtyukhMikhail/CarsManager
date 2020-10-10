@@ -18,6 +18,15 @@
         "entryPath": "/test-resources"
       },
       "description": "SAPUI5 Test Resources"
+    },
+    {
+      "path": "/sap/opu/odata",
+      "target": {
+        "type": "destination",
+        "name": "IDES_SAPUI5_School",
+        "entryPath": "/sap/opu/odata"
+      },
+      "description": "IDES_SAPUI5_School"
     }
   ],
   "sendWelcomeFileRedirect": true

@@ -21,6 +21,7 @@ sap.ui.define([
 			UIComponent.prototype.init.apply(this, arguments);
 			
 			this.setModel(models.createDataModel(), "data");
+			
 			sap.ui.getCore().setModel(this.getModel("i18n"), "i18n");
 
 			// set the device model

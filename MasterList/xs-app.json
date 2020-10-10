@@ -6,6 +6,13 @@
   },
   "routes": [
     {
+      "source": "^/IDES_SAPUI5_School/(.*)$",
+      "target": "$1",
+      "authenticationType": "none",
+      "destination": "IDES_SAPUI5_School",
+      "csrfProtection": false
+    },
+    {
       "source": "^(.*)$",
       "target": "$1",
       "service": "html5-apps-repo-rt",

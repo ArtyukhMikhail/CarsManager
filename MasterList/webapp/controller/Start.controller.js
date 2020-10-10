@@ -1,13 +1,27 @@
 sap.ui.define([
 	"sap/ui/core/mvc/Controller",
 	"sap/ui/model/Filter",
-	"sap/ui/model/FilterOperator"
-], function (Controller, Filter, FilterOperator) {
+	"sap/ui/model/FilterOperator",
+	"sap/m/MessageToast"
+], function (Controller, Filter, FilterOperator, MessageToast) {
 	"use strict";
 
 	return Controller.extend("masterdetail.MasterList.controller.Start", {
 		onInit: function () {
 			this.getOwnerComponent().getRouter().getRoute('Start').attachPatternMatched(this.handlePatternMatched, this);
+
+			var sPath = "/CarsSet";
+			var mParameters = {
+				success: function (oData) {
+					
+					MessageToast.show(this.getView().getModel("i18n").getResourceBundle().getText("createSuccess"));
+				}.bind(this),
+				error: function (oResponse) {
+					var oErrorObj = JSON.parse(oResponse.responseText);
+					MessageToast.show("Error: " + oErrorObj.error.message.value);
+				}.bind(this)
+			};
+			this.getOwnerComponent().getModel().read(sPath, mParameters);
 		},
 		handlePatternMatched: function () {
 

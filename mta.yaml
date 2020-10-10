@@ -13,6 +13,8 @@ modules:
     requires:
       - name: mta_MasterList_html5_repo_runtime
       - name: uaa_mta_MasterList
+      - name: dest_mta_MasterList
+      - name: conn_mta_MasterList
   - name: mta_MasterList_ui_deployer
     type: com.sap.html5.application-content
     path: mta_MasterList_ui_deployer
@@ -55,4 +57,9 @@ resources:
     parameters:
       service-plan: lite
       service: destination
+    type: org.cloudfoundry.managed-service
+  - name: conn_mta_MasterList
+    parameters:
+      service-plan: lite
+      service: connectivity
     type: org.cloudfoundry.managed-service
